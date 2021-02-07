@@ -1,0 +1,96 @@
+////////////////////////////////////////
+//ABOUT SECTION
+/////////////////////////////////////////
+
+.about-section{
+    position: relative;
+    .container{
+        display: grid;
+        z-index: 5;
+    }
+}
+
+.about{
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(2, 50rem);
+        grid-template-rows: repeat(2, 20rem);
+        justify-content: center;
+        width: 100%;
+        row-gap: 7rem;
+        column-gap: 3rem;
+
+        @include response(tab-land){
+            grid-template-columns: 1fr;
+
+        }
+    }
+
+    &__item{
+        width: auto;
+        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .2);
+        display: grid;
+        background-color: white;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: min-content 1fr;
+        max-height: 30vh;
+
+        .header-3{
+            padding: 2rem;
+            align-self: center;
+        }
+
+        .paragraph{
+            align-self: flex-start;
+            padding-left: 2rem;
+        }
+
+
+
+    }
+
+    &__image{
+        grid-column: 1 / 2;
+        object-fit: cover;
+        grid-row: 1 / -1;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+}
+
+////////////////////////////////////////
+//EXPLORE SECTION
+/////////////////////////////////////////
+
+
+.section-explore{
+    margin: 0 auto;
+    grid-column: full-start / full-end;
+    .container{
+        display: grid;
+        grid-column: full-start / full-end;
+
+    }
+}
+
+
+////////////////////////////////////////
+//PREVIEW SECTION
+/////////////////////////////////////////
+
+.section-preview-hotel{
+    margin: 0 auto;
+    grid-column: full-start / full-end;
+    .container{
+        display: grid;
+        grid-column: center-start / center-end;
+
+        @include response(phone){
+            grid-column: full-start / full-end;
+        }
+    }
+}
+    

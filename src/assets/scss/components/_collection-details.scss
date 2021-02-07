@@ -1,0 +1,179 @@
+.detail{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    height: 70vh;
+
+    gap: 4rem;
+
+    &--flight{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+        height: max-content;
+
+
+    }
+
+    @include response(tab-port){
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        width: 70%;
+        height: 100vh;
+        grid-template-rows: repeat(2, max-content);
+    }
+
+    @include response(phone){
+        width: 95%;
+        height: 120vh;
+    }
+
+    &__images{
+        display: grid;
+        row-gap: 4rem;
+        height: 50vh;
+        grid-template-rows: 80% max-content;
+    }
+
+    &__details{
+        display: grid;
+        row-gap: 4rem;
+        height: max-content;
+        grid-auto-rows: max-content;
+
+        &--1{
+            box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .2);
+            display: flex;
+            justify-content: center;
+            padding: 3rem;
+            align-items: center;
+
+            h2{
+                font-size: 3rem;
+            }
+        }
+
+        &--2{
+            box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .2);
+            padding: 3rem;
+
+
+            .list{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                .item{
+                    list-style: none;
+                    font-size: 2rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    .label{
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    &__preview-image{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        align-items: flex-start;
+
+        .left,.right{
+            position: absolute;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            width: 6rem;
+            height: 6rem;
+            top: 50%;
+            font-size: 5rem;
+        }
+
+        .left{
+            left: 0;
+        }
+
+        .right{
+            right: 0;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    &__list-images{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    &__list-image{
+        width: 100%;
+        height: 15rem;
+        
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        &.active{
+            outline: 10px solid $color-primary;
+            outline-offset: 5px;
+
+            @include response(tab-port){
+                outline: none;
+            }
+        }
+
+    }
+
+    &__info{
+        background-color: white;
+        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .2);
+        border-radius: 10px;
+        height: min-content;
+        grid-auto-rows: min-content;
+        display: grid;
+        grid-template-rows: min-content;
+        row-gap: 3rem;
+        padding: 3rem;
+
+        @include response(tab-port){
+            margin-top: 7rem;
+
+        }
+
+        .star-rating{
+            justify-self: center;
+            border-radius: 0;
+        }
+
+        .custom-button{
+            justify-self: center;
+        }
+    }
+
+    &__list{
+        border-top: 2px solid gray;
+        padding-top: 3rem;
+    }
+
+    &__item{
+        font-size: 2rem;
+        display: flex;
+        margin: 1.3rem 0;
+        align-items: center;
+    }
+}
+
+.detail--flight .detail__info{
+    margin-top: 0;
+}

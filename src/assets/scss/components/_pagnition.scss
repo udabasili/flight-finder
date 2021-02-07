@@ -1,0 +1,40 @@
+.pagination {
+        display: flex;
+
+
+    &__item{
+        list-style: none;
+        font-size: 2rem;
+        font-weight: bolder;
+
+    }
+    &__link{
+        &:link,
+        &:visited{
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid rgb(116, 112, 112);
+        }
+
+        &:hover{
+            background-color: $color-primary-dark;
+        color: white;
+    
+        }
+        
+
+    }
+
+    &__link-active{
+        background-color: $color-primary-dark;
+        color: white;
+    }
+ 
+}
+
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}

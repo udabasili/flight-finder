@@ -1,0 +1,139 @@
+.card{
+    background-color: white;
+}
+.card--list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20rem;
+    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .15);
+    row-gap: 3rem;
+    max-width: 40rem;
+    max-height: 40rem;
+
+    @include response(phone){
+        max-width: none;
+    }
+
+    &__image{
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        position: relative;
+        
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    &__name{
+        position: relative;
+        color: white;
+        background-color: black;
+        grid-column: 1 / -1;
+        grid-row:  1 / 2;
+        font-size: 1.6rem;
+        text-align: center;
+        text-transform: uppercase;
+        align-self: flex-end;
+        padding: 1rem 2rem;
+
+    }
+
+    .price{
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    .star-rating{
+        display: flex;
+        justify-self: center;
+        width: 100%;
+        justify-content: center;
+        grid-column: 1 / -1;
+        
+    }
+
+    &__button{
+        
+
+        &:link,
+        &:visited{
+            padding: 2rem;
+            grid-column: 1 / -1;
+            background-color: $color-primary-dark;
+            font-size: 2rem;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
+
+.card--grid{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: min-content;
+    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .15);
+
+    &__image{
+        grid-column: 1 / 2;
+        grid-row: 1 / span 6;
+        position: relative;
+        
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: scale-down;
+
+        }
+    }
+
+    &__name,
+    &__departure,
+    &__price{
+        grid-column: 2 / 3;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        
+
+        .label{
+            font-weight: bold;
+            color: black;
+
+        }
+
+        .value{
+
+        }
+    }
+
+    &__button{
+        
+        &:link,
+        &:visited{
+            padding: 1rem;
+            grid-column: 2 / 3;
+            background-color: $color-primary-dark;
+            font-size: 2rem;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            width: 100%;
+            justify-self: flex-start;
+            color: white;
+        }
+    }
+}

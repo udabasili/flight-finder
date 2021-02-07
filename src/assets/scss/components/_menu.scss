@@ -1,0 +1,80 @@
+.menu{
+    display: none;
+    width: 20vw;
+    top: 15vh;
+    position: absolute;
+    right: 0;
+    
+
+
+    @include response(tab-land){
+        font-size: 4rem;
+        font-weight: bold;
+        top: 10px;
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+    }
+
+    
+    &--user{
+        top: 20vh;
+        position: absolute;
+        max-height: 40vh;
+        overflow-y: scroll;
+        width: 40vw;
+
+        .menu__item{
+           font-size: 2rem;
+            border-bottom: 2px rgba(128, 128, 128, 0.336) solid;
+            list-style: none;
+            background-color: black;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            padding: 0 3rem;
+            color: white; 
+        }
+
+    }
+    
+    &__item{
+        font-size: 2rem;
+        border-bottom: 2px rgba(128, 128, 128, 0.336) solid;
+        list-style: none;
+        background-color: black;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+        color: white;
+
+        @include response(tab-land){
+            padding: 3rem 0;
+            font-size: 2.5rem;
+            display: flex;
+            background-color: rgba($color: #000000, $alpha: .3);
+            align-items: center;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+
+            &::before{
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: black;
+                display: inline-block;
+                margin: 0 2rem;
+            }
+        }
+
+        &:hover{
+            color: gray;
+        }
+
+
+
+    }
+}

@@ -1,0 +1,28 @@
+.collection-items{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    height: max-content;
+    gap: 2rem;
+    grid-template-rows: min-content 1fr;
+
+    @include response(tab-port){
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: auto;
+        grid-template-rows: 15vh min-content 1fr;
+
+    }
+    
+}
+
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+
+}
+
+.card-list--grid{
+    grid-template-columns: 1fr;
+
+}

@@ -1,0 +1,30 @@
+.hotel-page{
+    display: grid;
+    grid-template-columns: inherit;
+    grid-column: full-start / full-end;
+    min-height: 100vh;
+    grid-template-rows: min-content max-content;
+
+    .container{
+        width: 90%;
+        grid-column: 1 / -1;
+        margin: 10rem auto;
+
+        @include response(tab-port){
+            width: 100%;
+        }
+
+        .search-section{
+            background-color: white;
+        }
+    }
+    
+}
+
+.search-section{
+    background-color: white;
+
+    &--hotels{
+
+    }
+}

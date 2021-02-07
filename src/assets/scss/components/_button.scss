@@ -1,0 +1,69 @@
+.custom-button{
+    border: none;
+    outline: none;
+    display: flex;
+    background-color: rgb(78, 146, 11);
+    color: white;
+    overflow: hidden;
+    height: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .2);
+    cursor: pointer;
+    width: 20rem;
+
+    &:hover{
+        transform: translateY(1px);
+    }
+
+    & > * {
+        height: 100%;
+    }
+
+    &__text{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+
+    }
+    
+
+    &__icon{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkgreen;
+
+        svg{
+            color: white;
+            font-size: 2rem;
+        }
+        
+    }
+}
+
+.btn{
+    &--filter{
+        justify-self: center;
+        width: 20vw;
+        display: none;         
+        margin: 2rem auto;
+   
+
+            @include response(tab-port){
+            display: flex;
+
+        }
+    
+    }
+
+    &--search{
+        justify-self: center;
+        margin: 2rem auto;
+    
+    }
+}

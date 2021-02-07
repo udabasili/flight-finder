@@ -1,0 +1,2 @@
+export const SET_CARS_FILTER = 'SET_CARS_FILTER';
+export const SET_PAGE_NUMBER_CARS = 'SET_PAGE_NUMBER_CARS';

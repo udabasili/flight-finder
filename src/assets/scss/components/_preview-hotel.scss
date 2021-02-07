@@ -1,0 +1,10 @@
+.preview-hotels{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+    margin: 0 auto;
+    justify-content: center;
+
+
+}
+
