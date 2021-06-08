@@ -13,7 +13,6 @@ Flight Finder is a  mobile-responsive, front-end booking service template.
 - Car booking
 
 
-
 ## Tech
 
 Dillinger uses a number of open source projects to work properly:
@@ -39,5 +38,4 @@ The best way is to visit the Heroku website for the deployed website  [Flight Fi
 
 #### Cars
 ![Screenshot_2021-02-07 Flight Finder(2)](https://user-images.githubusercontent.com/33573587/107160702-3ddaca80-696e-11eb-8efd-f4ec13313e48.png)
-
 
