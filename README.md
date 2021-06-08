@@ -1,7 +1,6 @@
 # Flight Finder
 
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Flight Finder is a  mobile-responsive, front-end booking service template.
 
@@ -15,7 +14,7 @@ Flight Finder is a  mobile-responsive, front-end booking service template.
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
+Flight Finder uses a number of open source projects to work properly:
 
 - [ReactJS] - HTML enhanced for web apps!
 - [Visual Studio Code] - awesome web-based text editor
